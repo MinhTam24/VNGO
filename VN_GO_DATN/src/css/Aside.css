@@ -1,0 +1,94 @@
+.highlighted-locations, .contact-list {
+    /* border-radius: 8px; Bo tròn các góc của khối danh sách */
+    margin-bottom: 15px; /* Đặt khoảng cách dưới giữa các khối */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Thêm bóng đổ nhẹ cho khối danh sách */
+    font-size: 0.9rem; /* Giảm kích thước chữ */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của container cha */
+  overflow-x: hidden; /* Ẩn phần tràn ngang */
+  padding: 0 10px;
+}
+
+.highlighted-locations h4, .contact-list h4 {
+    color: rgb(121, 120, 120); /* Đặt màu chữ cho tiêu đề là trắng */
+    padding: 8px; /* Thêm khoảng cách bên trong cho tiêu đề */
+    margin: 0; /* Loại bỏ khoảng cách mặc định cho tiêu đề */
+    border-radius: 8px 8px 0 0; /* Bo tròn góc trên cho tiêu đề */
+    font-size: 1rem; /* Đặt kích thước chữ cho tiêu đề */
+}
+
+.location-item, .contact-item {
+    display: flex; /* Sử dụng flexbox để sắp xếp các mục danh sách theo chiều ngang */
+    justify-content: space-between; /* Dàn đều các mục theo chiều ngang */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    padding: 8px 15px; /* Thêm khoảng cách bên trong cho các mục */
+    border-bottom: 1px solid #d5d4d4; /* Đặt viền dưới cho các mục */
+    width: 100%;
+    box-sizing: border-box;
+}
+.location-item:hover{
+    background-color: rgb(231, 214, 214);
+}
+
+.contact-item:hover{
+    background-color: rgb(231, 214, 214);
+}
+
+.location-item:last-child, .contact-item:last-child {
+    border-bottom: none; /* Loại bỏ viền dưới cho mục cuối cùng trong danh sách */
+}
+
+.location-item img {
+    width: 40px; /* Giảm kích thước ảnh */
+    height: 40px; /* Đặt chiều cao cho ảnh */
+     /* Làm tròn ảnh thành hình tròn */
+}
+.contact-item img {
+    width: 40px; /* Giảm kích thước ảnh */
+    height: 40px; /* Đặt chiều cao cho ảnh */
+    border-radius: 50%;
+}
+.location-item span, .contact-item span {
+    margin-left: 8px; /* Đặt khoảng cách giữa ảnh và văn bản */
+}
+
+.contact-item i {
+    color: green; /* Đặt màu xanh cho biểu tượng trạng thái */
+    font-size: 0.7rem; /* Giảm kích thước cho biểu tượng trạng thái */
+}
+
+.contact-item button {
+    white-space: nowrap; /* Đảm bảo văn bản trong nút không bị gãy dòng */
+    text-overflow: ellipsis; /* Thêm dấu chấm lửng nếu văn bản quá dài */
+    overflow: hidden;
+  }
+
+.ranking {
+    color: red; /* Đặt màu đỏ cho xếp hạng */
+    font-weight: bold; /* Đặt kiểu chữ đậm cho xếp hạng */
+}
+
+aside {
+    position: sticky;
+    /* Cố định aside khi cuộn */
+    top: 60px;
+    /* Giữ aside ở ngay dưới header */
+    height: calc(100vh - 60px);
+    /* Chiều cao của aside trừ chiều cao của header */
+    overflow-y: auto;
+    /* Kích hoạt cuộn nếu nội dung tràn */
+    padding: 20px;
+    /* Thêm padding để nội dung không chạm vào viền */
+    background-color: #ffffff;
+    /* Màu nền cho aside (tuỳ chọn) */
+    z-index: 999;
+    /* Đảm bảo nó ở trên các phần khác */
+}
+aside::-webkit-scrollbar {
+    width: 0;
+    /* Ẩn chiều rộng thanh cuộn */
+}
+/* Xóa viền khi click vào button (khi button có focus) */
+.btn:focus {
+    outline: none; /* Xóa viền focus mặc định */
+    border: none;  /* Nếu cần xóa viền border */
+}

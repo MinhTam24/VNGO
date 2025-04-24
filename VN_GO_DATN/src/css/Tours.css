@@ -1,0 +1,53 @@
+.post-card .card {
+    display: flex;
+    align-items: center; /* Canh giữa ảnh và nội dung theo chiều dọc */
+}
+
+.card-img-left {
+    width: 250px; /* Đặt chiều rộng cố định cho ảnh */
+    height: 200%; /* Chiều cao ảnh sẽ theo chiều cao của card */
+    object-fit: cover; /* Giữ tỉ lệ ảnh và cắt nếu cần */
+    border-radius: 8px 0 0 8px; /* Bo góc cho ảnh */
+}
+
+.post-card .card {
+    background-color: #ffffff; /* Nền trắng */
+    color: #333;               /* Màu chữ tối */
+    border: 1px solid #ddd;    /* Viền nhạt */
+    border-radius: 8px;        /* Bo tròn góc card */
+    overflow: hidden;          /* Ẩn phần thừa của ảnh hoặc nội dung */
+}
+.card-body {
+    padding: 20px; /* Thêm khoảng cách cho nội dung chữ */
+}
+
+.xem {
+    background-color: #007bff;  /* Màu xanh dương */
+    color: #fff;                /* Màu chữ trắng */
+    border: none;               /* Bỏ đường viền */
+    padding: 10px 20px;         /* Khoảng cách trong nút */
+    font-size: 16px;            /* Kích thước chữ */
+    border-radius: 5px;         /* Bo tròn góc nút */
+    cursor: pointer;            /* Đổi con trỏ chuột khi rê vào nút */
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+.xem:hover {
+    background-color: #0056b3;  /* Màu xanh đậm hơn khi hover */
+}
+
+.xem:focus {
+    outline: none;              /* Bỏ viền khi nhấn vào nút */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3); /* Viền xanh nhẹ khi focus */
+}
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;       /* Giới hạn số dòng tối đa là 3 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;     /* Hiển thị dấu "..." khi văn bản vượt quá */
+    max-height: 4.5em;           /* Điều chỉnh phù hợp với số dòng và line-height */
+    line-height: 1.5em;          /* Khoảng cách dòng, điều chỉnh nếu cần */
+}
+
+

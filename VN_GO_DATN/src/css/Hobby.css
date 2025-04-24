@@ -1,0 +1,331 @@
+Modal backdrop
+.modal.show {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+}
+
+/* Modal dialog */
+.custom-modal-dialog {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Modal content */
+.custom-modal-content {
+  padding: 20px;
+}
+
+/* Modal header */
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.custom-modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-modal-header .btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Modal body */
+.custom-modal-body {
+  padding: 20px;
+}
+
+.custom-modal-body .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.custom-modal-body .form-control {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.custom-modal-body .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Modal footer */
+.custom-modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #ddd;
+}
+
+.custom-modal-footer .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modal-footer .btn-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: none;
+}
+
+.custom-modal-footer .btn-secondary:hover {
+  background-color: #e2e6ea;
+}
+
+.custom-modal-footer .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.custom-modal-footer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+#imageContainer {
+  height: 600px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+
+#imageLoad {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  overflow: hidden;
+
+}
+
+img {
+  object-fit: cover;
+  /* Đảm bảo hình ảnh không bị méo */
+  width: 100%;
+  /* Độ rộng hình ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+  height: 100%;
+  /* Độ cao hình ảnh chiếm toàn bộ chiều cao của phần tử cha */
+}
+
+.h-40 {
+  height: 30%;
+}
+
+.h-60 {
+  height: 70%;
+}
+
+.plus-one {
+  position: absolute;
+  /* Đặt chữ "+1" ở vị trí tuyệt đối */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  /* Nền mờ cho chữ */
+  z-index: 1;
+  /* Đảm bảo chữ "+1" nằm trên các hình ảnh */
+}
+
+
+li {
+  list-style: none;
+}
+
+.list-group a {
+
+  text-decoration: none;
+  color: black;
+}
+
+.Name p {
+  margin-top: 70px;
+  font-weight: bold;
+}
+
+.edit button {
+  margin-top: 120px;
+  margin-bottom: 0px;
+}
+
+.danhMuc {
+  list-style: none;
+
+}
+
+.first-section {
+  position: relative;
+}
+
+.background-profile {
+  margin: 0 90px;
+  position: relative;
+  height: 350px;
+}
+
+.background-image {
+  position: relative;
+  border-radius: 0 0 12px 12px;
+}
+
+.avartarBox {
+  position: absolute;
+  top: 110%;
+  /* Điều chỉnh khoảng cách từ trên xuống */
+  left: 45%;
+  /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+  /* Căn chính xác giữa */
+  z-index: 1;
+  /* Đảm bảo nằm trên background-profile */
+  width: 1000px;
+}
+
+
+
+
+.avartarBox img {
+  border: 4px solid white;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  padding: 0;
+}
+
+.da {
+  padding-top: 120px;
+}
+
+.userName {
+  padding-top: 60px;
+}
+
+.name {
+  margin-top: 30px;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+
+
+.catalog li a {
+  font-weight: bold;
+  color: #7e7e7e;
+  text-align: center;
+  width: 150px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.second-session {
+  background-color: #ddd;
+}
+
+.post-card {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+  /* Giúp văn bản xuống dòng nếu quá dài */
+  white-space: normal;
+  /* Đảm bảo văn bản có thể xuống dòng */
+}
+
+.list-group-item i {
+  font-size: 1.2rem;
+}
+
+.list-group-item .span-hobby {
+  display: inline-block;
+  width: 60%;
+  max-width: 95%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.btn-custom {
+  font-size: 14px;
+  /* Giảm kích thước font chữ */
+  padding: 5px 10px;
+  /* Điều chỉnh kích thước nút */
+  border-radius: 5px;
+  /* Làm mềm góc nút */
+  background-color: #6c757d;
+  /* Màu nền của nút */
+  color: rgb(235, 0, 0);
+  /* Màu chữ */
+  border: none;
+  /* Xóa border mặc định */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Thêm hiệu ứng khi hover */
+}
+
+.btn-custom:hover {
+  background-color: #5a6268;
+  /* Màu nền khi hover */
+  transform: scale(1.05);
+  /* Tăng kích thước khi hover */
+}
+
+.btn-custom i {
+  font-size: 13px;
+  /* Kích thước của biểu tượng */
+}
+
+
+@media (max-width: 768px) {
+  .Name p {
+    justify-content: center;
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  .ava {
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .ava {
+    text-align: right;
+  }
+}

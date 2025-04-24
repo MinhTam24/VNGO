@@ -1,0 +1,784 @@
+main {
+    background-color: #ffffff;
+}
+
+
+
+.main-link {
+    color: black;
+    /* Đặt màu của liên kết chính thành đen */
+    text-decoration: none;
+    /* Loại bỏ gạch chân của liên kết */
+}
+
+/********************** POST INPUT *******************/
+/* Container của toàn bộ phần nhập */
+.post-input {
+    margin: 68px;
+
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: flex-start;
+    /* Căn mọi thứ sang trái */
+    margin-top: 10px;
+    /* Khoảng cách giữa input và phần khác */
+    padding: 10px;
+    /* Thêm padding cho toàn bộ container */
+    background-color: #fff;
+    /* Nền trắng */
+    border-radius: 10px;
+    /* Bo tròn các góc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Bóng đổ nhẹ */
+}
+
+.avatar1 {
+    width: 40px;
+    /* Kích thước của avatar */
+    height: 40px;
+    border-radius: 50%;
+    /* Bo góc thành hình tròn */
+    margin-right: 10px;
+    /* Khoảng cách giữa avatar và button */
+}
+
+.input-text {
+    flex-grow: 1;
+    /* Để button/input chiếm không gian còn lại */
+    padding: 10px;
+    /* Padding cho button/input */
+    border: none;
+    /* Bỏ viền của button/input */
+    border-radius: 25px;
+    /* Bo góc cho button/input */
+    background-color: #e9ecef;
+    /* Màu nền của button/input */
+    color: #000;
+    /* Màu chữ */
+    text-align: left;
+    /* Căn chữ sang trái */
+    cursor: pointer;
+    /* Hiển thị con trỏ khi hover */
+}
+
+/* Thêm hiệu ứng hover nếu cần */
+.input-text:hover {
+    background-color: #dcdcdc;
+    /* Màu nền khi hover */
+}
+
+.icon-container {
+    display: flex;
+    /* Sử dụng flexbox cho icon */
+    margin-left: 10px;
+    /* Khoảng cách giữa button/input và icons */
+}
+
+.icon-container i {
+    font-size: 20px;
+    /* Kích thước biểu tượng */
+    margin-left: 10px;
+    /* Khoảng cách giữa các biểu tượng */
+    color: #000;
+    /* Màu sắc biểu tượng */
+}
+
+/* Thêm khoảng cách giữa các icon */
+.icon-container .green-icon {
+    color: green;
+    /* Đặt màu cho icon hình ảnh */
+}
+
+.icon-container .blue-icon {
+    color: blue;
+    /* Đặt màu cho icon bút */
+}
+
+
+/*************************** POST *******************************/
+.post-card {
+    max-width: 600px;
+    min-width: 600px;
+    border: 1px solid #ddd;
+    /* Đặt viền cho thẻ bài viết */
+    border-radius: 10px;
+    /* Làm cho các góc của thẻ bài viết bo tròn */
+    background-color: #fff;
+    /* Đặt màu nền của thẻ bài viết là màu trắng */
+    margin: 20px 67px;
+    /* Đặt khoảng cách trên và dưới của thẻ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng đổ nhẹ để làm nổi bật thẻ */
+}
+
+.post-header {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp các phần tử ngang hàng */
+    justify-content: space-between;
+    /* Dàn đều các phần tử theo chiều ngang */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px;
+    /* Thêm khoảng cách bên trong giữa nội dung và cạnh thẻ */
+}
+
+/* Đảm bảo nội dung bài viết không bị tràn mà tự xuống dòng */
+.post-content p {
+    word-wrap: break-word;
+    /* Ngắt từ dài thành nhiều dòng */
+    overflow-wrap: break-word;
+    /* Tương tự như word-wrap */
+    white-space: normal;
+    /* Cho phép xuống dòng */
+}
+
+
+
+.avatar {
+    width: 40px;
+    /* Đặt chiều rộng của ảnh đại diện */
+    height: 40px;
+    /* Đặt chiều cao của ảnh đại diện */
+    border-radius: 50%;
+    /* Làm tròn ảnh đại diện thành hình tròn */
+    margin-right: 10px;
+    /* Đặt khoảng cách bên phải giữa ảnh đại diện và thông tin người dùng */
+}
+
+.user-info {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp các thông tin người dùng */
+    flex-direction: column;
+    /* Sắp xếp các phần tử con theo chiều dọc */
+}
+
+.username {
+    font-size: 16px;
+    /* Đặt kích thước chữ cho tên người dùng */
+    font-weight: bold;
+    /* Đặt kiểu chữ đậm cho tên người dùng */
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định trên dưới của tên */
+}
+
+.time {
+    font-size: 12px;
+    /* Đặt kích thước chữ nhỏ hơn cho thời gian */
+    color: gray;
+    /* Đặt màu xám cho thời gian */
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định trên dưới của thời gian */
+}
+
+.save-icon {
+    font-size: 20px;
+    /* Đặt kích thước cho biểu tượng Save */
+    color: black;
+    /* Đặt màu đen cho biểu tượng Save */
+    cursor: pointer;
+    /* Thêm con trỏ pointer để biểu thị rằng biểu tượng có thể nhấp vào */
+}
+
+.post-image {
+    width: 100%;
+    /* Đặt hình ảnh chiếm toàn bộ chiều rộng thẻ */
+    max-height: 600px;
+    min-height: 600px;
+    /* Đặt chiều cao tối đa cho hình ảnh */
+    object-fit: contain;
+    /* Cắt hình ảnh để đảm bảo hình ảnh không bị biến dạng */
+    border-bottom: 1px solid #ddd;
+    /* Đặt viền dưới cho hình ảnh để ngăn cách nó với nội dung dưới */
+}
+
+.post-content {
+    padding: 10px;
+    /* Thêm khoảng cách bên trong cho nội dung bài viết */
+}
+
+.post-icons {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp các biểu tượng tương tác ngang hàng */
+    justify-content: space-between;
+    /* Dàn đều các biểu tượng theo chiều ngang */
+    align-items: center;
+    /* Căn giữa các biểu tượng theo chiều dọc */
+    padding: 10px;
+    /* Thêm khoảng cách bên trong */
+    border-top: 1px solid #ddd;
+    /* Đặt viền trên để ngăn cách phần nội dung với phần tương tác */
+}
+
+.interaction {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp biểu tượng và số lượt tương tác */
+    align-items: center;
+    /* Căn giữa biểu tượng và văn bản theo chiều dọc */
+}
+
+.interaction i {
+    margin-right: 5px;
+    /* Thêm khoảng cách nhỏ giữa biểu tượng và văn bản */
+}
+
+.interaction-count {
+    margin-left: 5px;
+    /* Thêm khoảng cách nhỏ giữa văn bản và biểu tượng */
+}
+
+.post-footer {
+    padding: 10px;
+    /* Thêm khoảng cách bên trong cho phần liên kết ở cuối thẻ */
+    border-top: 1px solid #ddd;
+    /* Đặt viền trên cho phần liên kết */
+    font-size: 14px;
+    /* Đặt kích thước chữ nhỏ hơn cho liên kết */
+    color: #007bff;
+    /* Đặt màu xanh cho liên kết */
+    cursor: pointer;
+    /* Thêm con trỏ pointer để biểu thị rằng liên kết có thể nhấp vào */
+}
+
+.fas {
+    cursor: pointer;
+    /** Trỏ chuột **/
+}
+
+.post-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Hoặc chiều cao tùy ý */
+    overflow: hidden;
+    /* Tránh tràn nội dung */
+}
+
+.post-image-container .mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Đảm bảo tất cả phần tử con chiếm đầy container */
+    display: none;
+    background-color: #000000e2;
+}
+
+.post-image-container .mySlides img {
+    width: 100%;
+    /* Chiều rộng của ảnh sẽ chiếm hết container */
+    height: 100%;
+    /* Chiều cao của ảnh sẽ chiếm hết container */
+    object-fit: contain;
+    /* Đảm bảo ảnh không bị cắt mà vẫn vừa khung */
+}
+
+
+
+/* Các nút điều hướng */
+.prevPost,
+.nextPost {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prevPost {
+    left: 10px;
+}
+
+.nextPost {
+    right: 10px;
+}
+
+.numbertext {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    z-index: 1;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prevPost:hover,
+.nextPost:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Nút điều hướng trong modal */
+.modal-image-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.prevPostModal,
+.nextPostModal {
+    background-color: transparent;
+    border: none;
+    color: rgb(1, 1, 1);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding-bottom: auto;
+}
+
+/* Hiệu ứng khi hover */
+.prevPostModal:hover,
+.nextPostModal:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+
+/* Đảm bảo các nút sẽ không chồng lên nhau */
+.prevPostModal {
+    margin-left: 17px;
+}
+
+.nextPostModal {
+    margin-right: 500px;
+}
+
+
+/* Chỉnh sửa modal để nó to hơn và căn giữa */
+.modal-dialog {
+    width: 55vw !important;
+    /* Modal chiếm 80% chiều rộng màn hình */
+    max-width: none !important;
+    /* Loại bỏ giới hạn chiều rộng tối đa */
+    height: 90vh !important;
+    /* Modal chiếm 80% chiều cao màn hình */
+    margin: 0 auto;
+    /* Căn giữa modal */
+    overflow-x: hidden;
+    /* Ngăn cuộn ngang */
+    overflow-y: hidden;
+    /* Ngăn cuộn ngang */
+    overflow: hidden;
+    /* Ngăn cuộn ngang */
+
+}
+
+
+/* Đảm bảo modal-content chiếm toàn bộ diện tích */
+
+.modal-content {
+    width: 45vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* Ngăn thanh cuộn ngang */
+    border-radius: 0 !important;
+}
+
+/* Nếu nội dung trong modal quá dài, sẽ xuất hiện thanh cuộn dọc */
+/* .modal-body { */
+/* max-height: 100%;           Giới hạn chiều cao của phần thân modal */
+/* height: 80vh; */
+/* } */
+
+.mySlides {
+    height: 100%;
+}
+
+/* Chỉnh sửa thanh cuộn nếu cần */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**        ICON            **/
+
+
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interaction {
+    font-size: 13px;
+    display: flex;
+}
+
+.interaction span {
+    margin-bottom: 0px;
+    /* Khoảng cách giữa dòng chữ và icon */
+}
+
+.interaction button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    /* Loại bỏ khoảng cách nội bộ của button */
+    margin: 0;
+    /* Loại bỏ khoảng cách ngoài của button */
+}
+
+.interaction i {
+    font-size: 20px;
+    /* Kích thước của icon */
+    line-height: 1;
+    /* Loại bỏ khoảng trống dưới icon */
+}
+
+
+
+
+/* CSS cho phần bình luận */
+.comments {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+    min-height: 400px;
+    font-family: 'Roboto', sans-serif;
+    /* Sử dụng font chữ Roboto */
+    font-size: 14px;
+    /* Chỉnh cỡ chữ cho bình luận */
+    line-height: 1.5;
+    /* Điều chỉnh khoảng cách dòng */
+    color: #333;
+    /* Màu chữ */
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    /* Khoảng cách giữa các bình luận */
+}
+
+.comment .user-info {
+    display: flex;
+    margin-bottom: 8px;
+    /* Khoảng cách giữa avatar và nội dung bình luận */
+}
+
+.comment .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Khoảng cách giữa avatar và tên */
+}
+
+.comment .username {
+    font-weight: bold;
+    /* In đậm tên người dùng */
+    color: #000000;
+    /* Màu chữ cho tên người dùng */
+}
+
+.comment .content {
+    word-wrap: break-word;
+    /* Ngắt từ khi cần thiết */
+    white-space: normal;
+    /* Cho phép nội dung xuống dòng */
+    max-width: 530px;
+    /* Đảm bảo không bị tràn ra ngoài */
+}
+
+.comment .time {
+    font-size: 12px;
+    /* Cỡ chữ nhỏ hơn cho thời gian */
+    color: #888;
+    /* Màu chữ xám nhạt cho thời gian */
+    margin-top: 0;
+    /* Đảm bảo thời gian không có khoảng cách trên */
+    padding-top: 0;
+    /* Xóa padding trên */
+    padding-left: 50px;
+}
+
+/* Đảm bảo nội dung bình luận xuống dòng khi vượt quá chiều dài */
+.comment p {
+    word-wrap: break-word;
+    /* Ngắt từ dài thành nhiều dòng */
+    overflow-wrap: break-word;
+    /* Tương tự như word-wrap */
+    white-space: normal;
+    /* Cho phép xuống dòng */
+    margin: 0;
+    /* Loại bỏ margin thừa */
+    max-width: 400px;
+    /* Đảm bảo không bị tràn ra ngoài */
+}
+
+
+
+.CommentInput {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.CommentInput input {
+    border: none;
+    /* Xóa viền */
+    outline: none;
+    /* Xóa hiệu ứng focus mặc định */
+    background-color: #f9f9f9;
+    /* Màu nền nhẹ, giống IG */
+    padding: 8px 12px;
+    /* Khoảng cách bên trong */
+    border-radius: 20px;
+    /* Bo góc tròn */
+    width: 100%;
+    /* Đầy đủ chiều rộng */
+    font-size: 14px;
+    /* Font chữ mềm mại */
+    font-family: Arial, sans-serif;
+    /* Font giống IG */
+    transition: all 0.3s ease;
+    /* Hiệu ứng khi focus */
+}
+
+.CommentInput input:focus {
+    background-color: #fff;
+    /* Màu nền sáng hơn khi focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Tạo hiệu ứng nổi */
+}
+
+.CommentInput button {
+    border: none;
+    /* Xóa viền */
+    background: none;
+    /* Không có nền */
+    color: #3897f0;
+    /* Màu xanh đặc trưng IG */
+    font-weight: bold;
+    /* In đậm */
+    cursor: pointer;
+    /* Hiển thị icon bàn tay */
+    font-size: 14px;
+    transition: color 0.3s ease;
+    /* Hiệu ứng hover */
+}
+
+.CommentInput button:hover {
+    color: #2565a8;
+    /* Màu đậm hơn khi hover */
+}
+
+.CommentInput button:disabled {
+    color: #b2dffc;
+    /* Màu nhạt hơn khi không khả dụng */
+    cursor: not-allowed;
+    /* Trạng thái không khả dụng */
+}
+
+
+
+
+
+/*********Modal CreatePost **********/
+/* Thêm các kiểu CSS gốc của bạn ở đây */
+.modal-content-share {
+    background: #fff;
+    width: 450px;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content-share h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content-share textarea {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    resize: none;
+}
+
+.modal-content-share .share-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1877F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content-share .share-btn:hover {
+    background-color: #1558b0;
+}
+
+.friends-list-container-share {
+    position: relative;
+}
+
+.friends-list-share {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.friends-list-share::-webkit-scrollbar {
+    display: none;
+}
+
+.friend-share {
+    text-align: center;
+    flex: none;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+
+.friend-share img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.friend-share span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.friends-nav-share {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.friends-nav-share button {
+    background-color: transparent;
+    color: #1877F2;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.friends-nav-share button:hover {
+    color: #1558b0;
+}
+
+.copy-link-container-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+}
+
+.copy-link-container-share input {
+    width: 80%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.copy-link-container-share button {
+    background-color: #1877F2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-link-container-share button:hover {
+    background-color: #bcc2cb;
+}
+
+/** Thanh cuộn trong update tour */
+
+/* Ẩn thanh cuộn trên các trình duyệt Webkit (Chrome, Safari, Edge) */
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ẩn thanh cuộn trên Firefox */
+.modal-body {
+    scrollbar-width: none;
+    /* Ẩn thanh cuộn trên Firefox */
+}
+
+.comments-section {
+    flex: 1;
+    overflow-y: scroll; /* Cho phép cuộn mà không hiển thị thanh cuộn */
+    margin-bottom: 10px;
+    max-height: 410px;
+}
+
+.comments-section::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trong Webkit browsers */
+}
+
+.comments-section {
+    -ms-overflow-style: none;  /* Ẩn thanh cuộn cho IE/Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trong Firefox */
+}
+
+.blog-comment {
+    width: auto;
+    border-radius: 20px;
+    background-color: #d5d5d5;
+}

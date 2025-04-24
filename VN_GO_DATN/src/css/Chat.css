@@ -1,0 +1,285 @@
+/********************* HỘP DANH SÁCH CHAT**********************/
+/* Định dạng hộp chat */
+.chat-box {
+    width: 350px; /* Chiều rộng của hộp chat */
+    height: auto; /* Chiều cao của hộp chat */
+    background-color: white; /* Màu nền của hộp chat */
+    border: 1px solid #ddd; /* Viền mỏng xung quanh hộp chat */
+    border-radius: 5px; /* Bo tròn các góc của hộp chat */
+    position: fixed; /* Giữ nguyên vị trí khi cuộn trang */
+    top: 60px; /* Đặt vị trí cố định dưới header */
+    right: 20px; /* Canh lề phải 20px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng cho hộp chat */
+    z-index: 1000; /* Đảm bảo hộp chat hiển thị trên các phần tử khác */
+    overflow: hidden; /* Ẩn nội dung tràn ra ngoài hộp */
+}
+
+/* Header của hộp chat */
+.chat-header {
+    padding: 10px; /* Khoảng cách bên trong của header */
+    background-color: #f5f5f5; /* Màu nền cho header */
+    border-bottom: 1px solid #ddd; /* Viền dưới cho header */
+    text-align: center; /* Căn giữa nội dung trong header */
+    font-weight: bold; /* Chữ đậm cho tiêu đề header */
+    position: relative; /* Đặt vị trí tương đối để có thể đặt nút đóng */
+}
+
+/* Định dạng cho nút đóng (dấu X) */
+.close-btn {
+    background: none; /* Không có màu nền */
+    border: none; /* Không có viền */
+    font-size: 20px; /* Kích thước chữ cho nút đóng */
+    color: #333; /* Màu chữ cho nút đóng */
+    position: absolute; /* Đặt vị trí tuyệt đối trong header */
+    top: 10px; /* Đặt cách từ trên xuống 10px */
+    right: 10px; /* Đặt cách từ bên phải vào 10px */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua */
+}
+
+/* Hiệu ứng khi hover lên nút đóng */
+.close-btn:hover {
+    color: #ff0000; /* Đổi màu chữ thành đỏ khi hover */
+}
+
+/* Khu vực tìm kiếm trong hộp chat */
+.chat-search {
+    padding: 10px; /* Khoảng cách bên trong cho khu vực tìm kiếm */
+    border-bottom: 1px solid #ddd; /* Viền dưới cho khu vực tìm kiếm */
+}
+
+/* Định dạng ô nhập tìm kiếm */
+.chat-search input {
+    width: 100%; /* Chiều rộng 100% của khu vực tìm kiếm */
+    padding: 8px; /* Khoảng cách bên trong cho ô nhập */
+    border: 1px solid #ddd; /* Viền cho ô nhập */
+    border-radius: 5px; /* Bo tròn các góc của ô nhập */
+}
+
+/* Danh sách chat với thanh cuộn */
+.chat-list {
+    max-height: 500px; /* Đặt chiều cao tối đa của danh sách chat */
+    overflow-y: auto; /* Tạo thanh cuộn dọc nếu nội dung vượt quá chiều cao */
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+}
+
+/* Định dạng cho mỗi mục chat trong danh sách */
+.chat-item {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px; /* Khoảng cách bên trong cho mục chat */
+    border-bottom: 1px solid #f0f0f0; /* Viền dưới cho mỗi mục chat */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua */
+}
+
+/* Hiệu ứng khi hover lên mục chat */
+.chat-item:hover {
+    background-color: #f9f9f9; /* Đổi màu nền khi hover */
+}
+
+/* Định dạng cho hình đại diện trong mục chat */
+.avatarDialog {
+    width: 55px; /* Chiều rộng hình đại diện */
+    height: 55px; /* Chiều cao hình đại diện */
+    border-radius: 50%; /* Bo tròn hình đại diện thành hình tròn */
+    margin-right: 10px; /* Khoảng cách bên phải hình đại diện */
+}
+
+/* Thông tin chat bao gồm tên và nội dung */
+.chat-info {
+    flex-grow: 1; /* Tự động chiếm không gian còn lại */
+}
+
+/* Định dạng cho tên người dùng trong chat */
+.chat-name {
+    font-weight: bold; /* Chữ đậm cho tên */
+}
+
+/* Định dạng cho nội dung tóm tắt trong chat */
+.chat-preview {
+    font-size: 12px; /* Kích thước chữ nhỏ hơn */
+    color: #666; /* Màu chữ nhạt hơn cho nội dung tóm tắt */
+}
+
+
+/*********************** HỘP CHAT ******************************/
+
+/* Cửa sổ chat */
+.chat-window {
+    width: 400px; /* Chiều rộng của cửa sổ chat */
+    height: 400px; /* Chiều cao của cửa sổ chat */
+    border: 1px solid #ddd; /* Đường viền xung quanh cửa sổ chat */
+    position: fixed; /* Đặt vị trí cố định */
+    bottom: 40px; /* Cách đáy của trình duyệt 20px */
+    right: 20px; /* Cách bên phải của trình duyệt 20px */
+    background-color: #fff; /* Màu nền của cửa sổ chat */
+    flex-direction: column; /* Sắp xếp các phần tử bên trong theo chiều dọc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng cho cửa sổ chat */
+    border-radius: 10px; /* Làm tròn các góc của cửa sổ chat */
+    z-index: 9999; /* Đảm bảo cửa sổ chat ở trên cùng */
+}
+
+/* Tiêu đề của cửa sổ chat */
+.chat-header {
+    padding: 15px; /* Khoảng cách bên trong tiêu đề */
+    background-color: #007bff; /* Màu nền cho tiêu đề */
+    color: white; /* Màu chữ cho tiêu đề */
+    display: flex; /* Hiển thị các phần tử theo hàng */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    border-radius: 10px 10px 0 0; /* Làm tròn góc trên của tiêu đề */
+}
+
+/* Kiểu chữ cho tiêu đề */
+.chat-header h3 {
+    font-size: large; /* Kích thước chữ cho tiêu đề */
+    margin: 0; /* Không có margin */
+    margin-left: 10px; /* Khoảng cách bên trái */
+}
+
+/* Avatar của người dùng trong tiêu đề */
+.header-avatar {
+    width: 40px; /* Chiều rộng của avatar */
+    height: 40px; /* Chiều cao của avatar */
+    border-radius: 50%; /* Làm tròn avatar thành hình tròn */
+}
+
+/* Nút đóng cửa sổ chat */
+.close-btn {
+    margin-left: auto; /* Đẩy nút đóng sang bên phải */
+    cursor: pointer; /* Hiển thị con trỏ như tay khi di chuột vào */
+    font-weight: bold; /* Chữ đậm cho nút đóng */
+    font-size: 18px; /* Kích thước chữ cho nút đóng */
+}
+
+/* Phần thân của cửa sổ chat */
+.chat-body {
+    padding: 10px; /* Khoảng cách bên trong phần thân */
+    height: 300px; /* Đặt chiều cao cố định cho phần thân */
+    overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung vượt quá chiều cao */
+    background-color: #f4f4f9; /* Màu nền cho phần thân chat */
+    display: flex; /* Hiển thị các phần tử bên trong */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các tin nhắn */
+}
+
+
+/* Đảm bảo khoảng cách giữa các tin nhắn của người dùng và bạn bè là đồng nhất */
+.message-container {
+    display: flex; /* Hiển thị theo hàng */
+    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều dọc */
+    margin-bottom: 10px; /* Khoảng cách giữa các tin nhắn */
+}
+
+/* Tin nhắn của người dùng và bạn bè */
+.user-message,
+.friend-message {
+    padding: 10px; /* Khoảng cách bên trong của tin nhắn */
+    border-radius: 20px; /* Làm tròn các góc của tin nhắn */
+    max-width: 75%; /* Đặt chiều rộng tối đa cho tin nhắn */
+    word-wrap: break-word; /* Ngắt dòng cho chữ dài */
+    display: inline-block; /* Hiển thị như một khối nội tuyến */
+    font-size: 0.9em; /* Kích thước chữ cho tin nhắn */
+    margin: 0; /* Không có margin */
+    padding: 10px 15px; /* Tùy chỉnh khoảng cách bên trong */
+}
+
+/* Kiểu cho tin nhắn của người dùng */
+.user-message {
+    background-color: #dcf8c6; /* Màu nền cho tin nhắn của người dùng */
+    margin-left: auto; /* Căn phải */
+}
+
+/* Kiểu cho tin nhắn của bạn bè */
+.friend-message {
+    background-color: #ffffff; /* Màu nền cho tin nhắn của bạn bè */
+    margin-right: auto; /* Căn trái */
+    border: 1px solid #ddd; /* Đường viền cho tin nhắn bạn bè */
+}
+
+/* Phần footer của cửa sổ chat */
+.chat-footer {
+    display: flex; /* Hiển thị theo hàng */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-top: 1px solid #ddd; /* Đường viền trên */
+    background-color: #fff; /* Màu nền cho footer */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border-radius: 0 0 10px 10px; /* Làm tròn các góc dưới */
+}
+
+/* Ô nhập tin nhắn */
+.message-input {
+    flex-grow: 1; /* Chiếm không gian còn lại */
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ddd; /* Đường viền cho ô nhập */
+    border-radius: 25px; /* Làm tròn các góc của ô nhập */
+    margin-right: 10px; /* Khoảng cách bên phải giữa ô nhập và nút gửi */
+    font-size: 1em; /* Kích thước chữ cho ô nhập */
+    outline: none; /* Không có viền khi ô nhập được chọn */
+    background-color: #f9f9f9; /* Màu nền cho ô nhập */
+}
+
+/* Nút gửi tin nhắn và nút gửi hình ảnh */
+.send-btn,
+.image-btn {
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white; /* Màu chữ cho nút */
+    border: none; /* Không có đường viền */
+    width: 50px; /* Chiều rộng của nút (thay đổi giá trị theo nhu cầu) */
+    height: 50px; /* Chiều cao của nút (cùng giá trị với chiều rộng) */
+    border-radius: 50%; /* Bo tròn các góc thành hình tròn */
+    cursor: pointer; /* Hiển thị con trỏ như tay khi di chuột vào */
+    font-size: 1.2em; /* Kích thước chữ cho nút */
+    outline: none; /* Không có viền khi nút được chọn */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+    display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+}
+
+/* Nút gửi hình ảnh */
+.image-btn {
+    margin-right: 5px; /* Khoảng cách bên phải giữa nút gửi hình ảnh và ô nhập */
+}
+
+/* Hiệu ứng khi di chuột vào nút gửi */
+.send-btn:hover,
+.image-btn:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Hình ảnh trong tin nhắn */
+.message-image {
+    max-width: 100%; /* Đặt chiều rộng tối đa cho hình ảnh */
+    border-radius: 10px; /* Làm tròn các góc của hình ảnh */
+}
+
+/* Avatar của bạn bè trong tin nhắn */
+.friend-avatar {
+    width: 40px; /* Chiều rộng của avatar bạn bè */
+    height: 40px; /* Chiều cao của avatar bạn bè */
+    border-radius: 50%; /* Làm tròn avatar thành hình tròn */
+    margin-right: 10px; /* Khoảng cách bên phải giữa avatar và tin nhắn */
+}
+.chat-item {
+    display: flex;
+    align-items: center;  /* Căn giữa theo chiều dọc */
+    margin: 5px 0;
+}
+
+
+  .chat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Giữ nguyên hình tròn */
+    margin-right: 10px; /* Khoảng cách giữa avatar và text */
+    object-fit: cover; /* Đảm bảo hình ảnh trong avatar được cắt vuông góc */
+}
+
+
+
+  .chat-item p {
+    white-space: nowrap; /* Không cho phép xuống dòng */
+    overflow: hidden;    /* Ẩn phần thừa nếu quá dài */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu nội dung quá dài */
+    max-width: 250px; /* Giới hạn chiều rộng, bạn có thể điều chỉnh tùy theo nhu cầu */
+    min-width: 250px;
+}

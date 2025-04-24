@@ -1,0 +1,86 @@
+/* Container ảnh nền */
+.auth-bg-container {
+    background: url('../img/Sea.jpg') no-repeat center center;
+    /* Ảnh nền */
+    background-size: cover;
+    /* Ảnh phủ toàn bộ container */
+    height: 200px;
+    /* Chiều cao cố định cho container */
+    position: relative;
+    /* Đặt khung tham chiếu cho chữ */
+    display: flex;
+    /* Để dễ dàng căn giữa chữ */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    border-top-left-radius: 5px;
+    /* Góc trên bên trái */
+    border-top-right-radius: 10px;
+    /* Góc trên bên phải */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+}
+
+/* Chữ trên ảnh nền */
+.auth-bg-text {
+    color: white;
+    /* Màu chữ trắng */
+    padding: 20px;
+    /* Khoảng cách bên trong */
+    border-radius: 8px;
+    /* Bo góc chữ */
+    text-align: center;
+    /* Căn giữa chữ */
+    max-width: 70%;
+    /* Giới hạn chiều rộng để nội dung không tràn */
+    font-size: 1.5rem;
+    /* Kích thước chữ */
+}
+
+/* Tổng thể cho card nhỏ */
+/* Tổng thể cho card nhỏ */
+.card.col-md-3 {
+    width: 250px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    margin: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card.col-md-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ảnh trong card */
+.card.col-md-3 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+
+
+}
+
+/* Nội dung card */
+.card.col-md-3 .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card.col-md-3 .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card.col-md-3 .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}

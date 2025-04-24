@@ -1,0 +1,92 @@
+nav{
+    background-color: #e4efef;
+}
+
+/* Định dạng cho thanh sidebar */
+.sidebar-area {
+    width: 100%; /* Chiều rộng của sidebar */
+    height: 100vh; /* Chiều cao của sidebar bằng chiều cao của viewport */
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-top: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Đổ bóng bên phải */
+}
+
+/* Định dạng cho phần thông tin người dùng */
+.user-profile-card {
+    margin-left: 5px;
+    text-align: left; /* Căn lề bên trái cho văn bản */
+    margin-bottom: 2%; /* Khoảng cách phía dưới của phần thông tin người dùng */
+}
+
+/* Định dạng cho hình ảnh của người dùng */
+.user-profile-card img {
+    width: 50px; /* Chiều rộng của hình ảnh */
+    height: 50px; /* Chiều cao của hình ảnh */
+    border-radius: 50%; /* Bo tròn góc để tạo hình tròn */
+    margin-right: 10px; /* Khoảng cách bên phải của hình ảnh */
+    vertical-align: middle; /* Căn chỉnh hình ảnh theo chiều dọc */
+}
+
+/* Định dạng cho tiêu đề của người dùng */
+.user-profile-card h2 {
+    display: inline-block; /* Hiển thị tiêu đề theo dạng khối nội tuyến */
+    font-size: 18px; /* Kích thước font chữ */
+    margin: 0; /* Xóa lề mặc định */
+    vertical-align: middle; /* Căn chỉnh tiêu đề theo chiều dọc */
+}
+
+/* Định dạng cho danh sách menu */
+.menu-items {
+    list-style: none; /* Xóa dấu chấm đầu dòng */
+    padding: 0; /* Xóa đệm cho danh sách */
+    padding-right: 10px;
+
+}
+
+/* Định dạng cho từng mục trong danh sách menu */
+
+/* Định dạng cho liên kết trong menu */
+.menu-items a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none; /* Xóa gạch chân */
+    color: black; /* Màu chữ cho liên kết */
+    font-size: 16px; /* Kích thước font chữ */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+/* Định dạng khi di chuột qua liên kết */
+.menu-items a:hover {
+    border-radius: 10px;
+    color: rgb(0, 0, 0); /* Thay đổi màu chữ khi di chuột */
+    background-color: #e9e9e9;
+}
+
+
+.menu-items a:active {
+    border-radius: 10px;
+    color: rgb(0, 0, 0); /* Thay đổi màu chữ khi di chuột */
+    background-color: #e9e9e9;
+}
+
+/* Định dạng cho biểu tượng trong menu */
+.menu-items i {
+    margin-right: 15px; /* Khoảng cách bên phải của biểu tượng */
+    font-size: 22px; /* Kích thước biểu tượng */
+}
+.sidebar {
+    height: 100vh;
+    /* Đảm bảo sidebar chiếm toàn bộ chiều cao */
+    overflow-y: hidden;
+    /* Kích hoạt cuộn nếu nội dung tràn */
+    position: sticky;
+    /* Cố định sidebar */
+    top: 60px;
+    /* Giữ sidebar ở ngay dưới header */
+    z-index: 999;
+    /* Đảm bảo nó ở trên các phần khác */
+    background-color: #ffffff;
+}
+

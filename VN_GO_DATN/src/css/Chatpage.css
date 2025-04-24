@@ -1,0 +1,386 @@
+html,
+body {
+    height: 100%; 
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.status-indicator.online {
+    background-color: green; /* Tích xanh */
+}
+
+.status-indicator.offline {
+    background-color: red; /* Tích đỏ */
+}
+
+/* Menu bên trái */
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.this-account {
+    height: 61px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.listChatUser {
+    border: 1px solid #ced4da;
+}
+
+.menu-item {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    background-color: white;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #e9e9e9;
+}
+
+
+
+
+.contact-list {
+    width: 100%;
+    height: 430px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+
+
+.contact-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+    background: #bbb;
+    /* Màu của thanh cuộn */
+    border-radius: 4px;
+}
+
+.contact-list::-webkit-scrollbar-thumb:hover {
+    background: #d1d0d0;
+    /* Màu khi hover vào thanh cuộn */
+}
+
+
+.user-contact {
+    width: 100%;
+    height: 90px;
+}
+
+
+.user-contact .contact-name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.user-contact .last-message {
+    font-weight: solid;
+    margin-top: 2px;
+    font-size: 0.9rem;
+}
+
+.chat-room-user {
+    background-color: #fdfdfd;
+    border-bottom: 1px solid rgba(151, 150, 150, 0.571);
+    height: 78px;
+}
+
+
+.user-contact p {
+    text-align: left;
+    margin-right: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+.user-contact img {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.user-contact {
+    padding-left: 0;
+    text-align: left;
+}
+
+.user-name {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.user-message-image {
+    margin-left: 12px;
+    margin-top: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.contact-information{
+    border: 1px solid #ced4da;
+    align-items: center;
+}
+
+.contact-information img{
+    margin-top: 60px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid;
+    align-items: center;
+}
+
+.contact-information .contact-name{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-information ul li{
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+
+
+.chat-room-user {
+    width: 100%;
+}
+
+.message-send-area {
+    width: 1060px;
+}
+
+
+
+
+.message-send-area input {
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    width: 100%;
+}
+
+.message-area{
+    width: 100%;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.message-send-area button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.message-send-area button:hover {
+    background-color: #0056b3;
+}
+
+.nav-mesage {
+    width: 70px;
+}
+
+/* Thanh cuộn */
+.messsage-area::-webkit-scrollbar,
+.chatList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messsage-area::-webkit-scrollbar-thumb,
+.chatList::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 3px;
+}
+
+.messsage-area::-webkit-scrollbar-thumb:hover,
+.chatList::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+/* Set up the avatar display for both message types */
+
+
+.other-message .user-message-image {
+    display: block;
+    /* Show avatar for other-message */
+}
+
+/* Additional styling for the message box */
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.my-message p,
+.other-message p {
+    margin-left: 10px;
+}
+
+/* Adjust the styles if needed for your chat container */
+.user-message-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+/* Định dạng vùng hiển thị tin nhắn */
+.messsage-area {
+    max-height: 480px;
+    min-height: 480px;
+    /* Giới hạn chiều cao vùng tin nhắn */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Hiển thị thanh cuộn dọc nếu cần */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Các tin nhắn xếp dọc */
+    gap: 10px;
+    /* Khoảng cách giữa các tin nhắn */
+    background-color: #f1f3f5;
+    font-size: 14px;
+    width: 1060px;
+}
+
+/* Định dạng chung cho tin nhắn */
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 60%;
+}
+
+/* Tin nhắn của người khác */
+.other-message {
+    align-self: flex-start;
+    /* Căn về bên trái */
+}
+
+.other-message p {
+    word-wrap: break-word;
+    margin-top: 18px;
+    max-width: 70%;
+}
+
+/* Tin nhắn của bạn */
+.my-message {
+    margin-left: auto;
+    align-self: flex-end;
+    /* Căn về bên phải */
+}
+
+/* Định dạng ảnh đại diện */
+.user-message-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nội dung tin nhắn */
+.message p {
+    background-color: #c7c7c8;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+/* Nội dung tin nhắn của bạn */
+.my-message p {
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    /* Màu chữ trắng */
+}
+
+.sentAt{
+    text-align: center;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message-input-area{
+    height: 80px;
+}
+
+.message-input-area textarea{
+    width: 85%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.btn-send-message{
+    background-color: #007bff;
+    color: rgb(227, 220, 220);
+    border: white   ;
+    margin-top: 20px;
+    width: 7%;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 25px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-send-message:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-send-message:active{
+    background-color: #e9e9e9;
+    color: black;
+    border: 1px      black;
+}
+

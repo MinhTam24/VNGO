@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  #chatPage {
+    margin-top: 20px;
+  }
+  #messageInput {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  #sendButton {
+    padding: 10px 20px;
+  }
+  #ChatArea {
+    border: 1px solid;
+    min-height: 300px;
+    max-height: 300px;
+    max-width: 900px;
+    min-width: 900px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message{
+    padding: 4px;
+    background-color: rgb(116, 175, 226);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+</style>
+<body>
+  <h1>Home</h1>
+  <ul id="user-email"></ul>
+  <ul id="userList"></ul>
+  <div id="chatPage">
+    <div id="ChatArea"></div>
+    <input id="messageInput" placeholder="Nhap tin nhan">
+    <button id="sendButton">Send</button>
+  </div>
+
+  <!-- Load SockJS and Stomp.js before your custom JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+  <!-- Your custom JS should be loaded after SockJS and Stomp.js -->
+  <script src="../js/homeJS.js"></script>
+</body>
+<style>
+  .receiver{
+    align-self: flex-start;
+  }
+
+  .sender{
+    align-self: flex-end;
+  }
+</style>
+</html>

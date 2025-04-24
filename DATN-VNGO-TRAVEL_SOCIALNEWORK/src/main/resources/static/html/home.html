@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #chatPage {
+            margin-top: 20px;
+        }
+        #messageInput {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        #sendButton {
+            padding: 10px 20px;
+        }
+        #ChatArea {
+        	background-color: blue;
+        	min-height: 300px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+    </style>
+<body>
+	<h1>Home</h1>
+	<ul id="user-email"></ul>
+	<ul id="userList">
+	
+	</ul>
+	<div id="chatPage">
+		<div id=ChatArea>	
+			
+		</div>
+		<input id="messageInput" placeholder="Nhap tin nhan">
+		<button id="sendButton">Send</button>
+	</div>
+	
+	<script type="text/javascript" src="../js/homeJS.js"></script>
+	<script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            checkTokenAndGetUserInfo();
+        });
+    </script>
+</body>
+</html>

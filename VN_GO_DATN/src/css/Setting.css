@@ -1,0 +1,38 @@
+.menu-vertical {
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    height: 100vh; /* Chiều cao toàn màn hình */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung dài */
+}
+
+.menu-vertical ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-vertical ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-vertical ul li:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+.content-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 1px solid #ddd;
+    min-height: 100vh;
+}
+
+.content-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}

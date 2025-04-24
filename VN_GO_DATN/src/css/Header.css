@@ -1,0 +1,141 @@
+body {
+    overflow-x: hidden;
+    /* Ẩn thanh cuộn ngang */
+    /* overflow: hidden; Đảm bảo không có cuộn ngang và dọc */
+}
+
+header {
+    background-color: #ffffff;
+    /* Màu nền cho header */
+    padding: 5px 20px;
+    /* Khoảng cách trong header */
+    display: flex;
+    /* Sử dụng Flexbox cho bố cục */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    flex-wrap: wrap;
+    /* Cho phép nội dung xuống dòng nếu không còn chỗ */
+    position: sticky;
+    /* Giữ header cố định */
+    top: 0;
+    /* Giữ header ở trên cùng */
+    z-index: 1000;
+    /* Đảm bảo nó ở trên các phần khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng cho header */
+}
+
+.logo {
+    width: 100%;
+    /* Kích thước logo */
+    height: 50px;
+    /* Kích thước logo */
+    margin-right: 30px;
+    /* Khoảng cách bên phải logo */
+    padding-right: 15px;
+}
+
+.search-container {
+
+    position: relative;
+    /* Thiết lập vị trí cho ô tìm kiếm và biểu tượng */
+    flex-grow: 0;
+    /* Ô tìm kiếm không chiếm phần còn lại */
+    width: 250px;
+    /* Chiều rộng cố định cho ô tìm kiếm */
+    transition: width 0.3s;
+    /* Hiệu ứng chuyển động khi thay đổi kích thước */
+}
+
+.search-input {
+    width: 180%;
+    /* Chiếm toàn bộ chiều rộng của container */
+    border: 1px solid #ccc;
+    /* Viền của ô tìm kiếm */
+    border-radius: 25px;
+    /* Bo góc ô tìm kiếm */
+    background-color: #fff;
+    /* Màu nền cho ô tìm kiếm */
+    padding: 4px 30px;
+    /* Chỉ giữ padding bên trái để có chỗ cho biểu tượng */
+    outline: none;
+    /* Không hiện viền khi nhấp vào */
+    margin-top: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    /* Đặt vị trí biểu tượng */
+    left: 10px;
+    /* Khoảng cách từ bên trái */
+    top: 50%;
+    /* Giữa theo chiều dọc */
+    transform: translateY(-50%);
+    /* Căn giữa chính xác */
+    color: #888;
+    /* Màu sắc cho biểu tượng */
+    pointer-events: none;
+    /* Ngăn chặn các sự kiện chuột cho biểu tượng */
+    margin-top: 2px;
+}
+
+.icons-container {
+    display: flex;
+    /* Sử dụng Flexbox cho các biểu tượng chức năng */
+    margin-left: auto;
+    /* Đẩy icon-container sang bên phải */
+    margin-right: 15px;
+    /* Tạo khoảng cách ở lề phải cho các icon-container */
+}
+
+.icon {
+    margin-left: 25px;
+    /* Khoảng cách giữa các biểu tượng */
+    color: rgb(0, 0, 0);
+    /* Màu sắc cho các biểu tượng */
+    cursor: pointer;
+    /* Con trỏ cho các biểu tượng */
+    font-size: 1.8rem;
+    /* Tăng kích thước biểu tượng */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .search-container {
+        width: 100px;
+        /* Giảm chiều rộng ô tìm kiếm trên điện thoại */
+    }
+
+    .icons-container .fa-cog {
+        display: none;
+        /* Ẩn biểu tượng cài đặt */
+    }
+}
+
+.notification-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-badge {
+   
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.messsage-notification{
+    position: absolute;
+    top: 6px; /* Điều chỉnh vị trí theo ý bạn */
+    right: 125px; /* Điều chỉnh vị trí theo ý bạn */
+}
+
+.other-notifcaton{
+    position: absolute;
+    top: 6px; /* Điều chỉnh vị trí theo ý bạn */
+    right: 180px; /* Điều chỉnh vị trí theo ý bạn */
+}

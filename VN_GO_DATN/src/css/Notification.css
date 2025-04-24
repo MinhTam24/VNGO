@@ -1,0 +1,100 @@
+/* Cấu trúc chung của thông báo */
+.notification {
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Kiểu thông báo thành công (màu xanh nước biển) */
+.notification.success {
+    background-color: #e3f2fd; /* Màu nền xanh nước biển sáng */
+    color: #0277bd; /* Màu chữ xanh nước biển đậm */
+    border-left: 5px solid #0288d1; /* Màu đường viền xanh nước biển */
+}
+
+/* Nút đóng */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.3s ease;
+}
+
+.btn-close:hover {
+    color: #333;
+    transform: scale(1.2);
+}
+
+.btn-close:active {
+    transform: scale(0.9);
+}
+
+.notification {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng mượt mà cho transform và box-shadow */
+}
+
+.notification:hover {
+    cursor: pointer;
+    transform: scale(1.02); /* Phóng to nhẹ */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho phần tử khi hover */
+}
+
+/* Bạn có thể thêm một chút độ sáng cho phần tử khi hover */
+.notification:hover {
+    background-color: #f1f8ff; /* Thay đổi màu nền khi hover */
+}
+
+
+
+/* Avatar của người dùng */
+.notification-avatar .avatar-img {
+    width: 70px; /* Đặt kích thước ảnh avatar */
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Tiêu đề thông báo */
+.notification .title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+/* Nội dung thông báo */
+.notification .content {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Thời gian thông báo */
+.notification .timestamp {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Sắp xếp các thành phần trong thông báo */
+.notification .d-flex {
+    display: flex;
+}
+
+/* Căn chỉnh dọc tiêu đề, nội dung và thời gian */
+.notification .d-flex.flex-column {
+    flex-direction: column;
+}
+
+.notification .d-flex.align-items-center {
+    align-items: center;
+}
+
+.titleTb{
+    font-weight: lighter;
+}

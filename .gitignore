@@ -1,0 +1,5 @@
+# Ignore the large video file
+VN_GO_DATN/public/video/Video.mp4
+
+# Ignore node_modules folder
+VN_GO_DATN/node_modules/
